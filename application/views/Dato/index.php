@@ -242,7 +242,7 @@
 						<h2>CRUD <b>Datos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Datos/agregarDato" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Dato</span></a>
+						<a href="<?php echo base_url(); ?>index.php/Materias/agregarDato" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Dato</span></a>
 
 					</div>
                 </div>
