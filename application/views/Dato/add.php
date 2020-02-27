@@ -254,16 +254,20 @@
 <?php echo form_open('Materias/agregarMateria'); ?>
 
 	            <div class="form-group">
-					<label>Dato 1</label>
+					<label>Nombre</label>
 					<input name="dato_dato1" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>Dato 2</label>
+					<label>Créditos</label>
 					<input name="dato_dato2" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>Dato 3</label>
+					<label>Semestre</label>
 					<input name="dato_dato3" type="text" class="form-control">
+				</div>
+        <div class="form-group">
+					<label>Folio</label>
+					<input name="dato_dato4" type="text" class="form-control">
 				</div>
 				<?php echo validation_errors(); ?>
 				<input type="submit" class="btn btn-success" value="Guardar">
