@@ -241,11 +241,11 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Dato <b><?= $dato->id_dato;?></b></h2>
+						<h2>Materia <b><?= $dato->id;?></b></h2>
 					</div>
 
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Datos" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
+						<a href="<?php echo base_url(); ?>index.php/Materias" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
 
 					</div>
                 </div>
@@ -254,26 +254,26 @@
 
 
              <?php echo validation_errors(); ?>
-			<?php echo form_open('Datos/actualizarDato'); ?>
+			<?php echo form_open('Materias/actualizarMateria'); ?>
 
 
-				<input style="display: none;" name="id_dato" value="<?= $dato->id_dato;?>" type="text" class="form-control">
+				<input style="display: none;" name="id" value="<?= $dato->id;?>" type="text" class="form-control">
 
 	            <div class="form-group">
 					<label>Nombre</label>
-					<input name="nombre" value="<?= $dato->dato_dato1;?>" type="text" class="form-control">
+					<input name="nombre" value="<?= $dato->nombre;?>" type="text" class="form-control">
 				</div>
 				<div class="form-group">
 					<label>Créditos</label>
-					<input name="creditos" value="<?= $dato->dato_dato2;?>" type="number" class="form-control">
+					<input name="creditos" value="<?= $dato->creditos;?>" type="number" class="form-control">
 				</div>
 				<div class="form-group">
 					<label>Semestre</label>
-					<input name="semestre" value="<?= $dato->dato_dato3;?>" type="number" class="form-control">
+					<input name="semestre" value="<?= $dato->semestre;?>" type="number" class="form-control">
 				</div>
-        <div class="form-group">
+        		<div class="form-group">
 					<label>Folio</label>
-					<input name="folio" value="<?= $dato->dato_dato3;?>" type="number" step="0.01" class="form-control">
+					<input name="folio" value="<?= $dato->folio;?>" type="number" step="0.01" class="form-control">
 				</div>
 				<input type="submit" class="btn btn-success" value="Guardar">
 			</form>

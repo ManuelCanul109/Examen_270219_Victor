@@ -44,9 +44,10 @@ class Materia extends CI_model{
 	public function actualizarMateri($id = null){
 		# code...
 		$alumno = array(
-			'nombre_alumno' => $this->input->post('nombre_alumno'),
-			'apellidos_alumno' => $this->input->post('apellidos_alumno'),
-			'matricula_alumno' => $this->input->post('matricula_alumno')
+			'nombre' => $this->input->post('nombre'),
+			'creditos' => $this->input->post('creditos'),
+			'semestre' => $this->input->post('semestre'),
+			'folio' => $this->input->post('folio')
 		);
 		$this->db->where('id',$this->input->post('id'));
 		return $this->db->update('materias',$alumno);

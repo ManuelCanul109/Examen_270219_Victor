@@ -43,9 +43,10 @@ class Materias extends CI_Controller{
 
 		if($id != null){
 			$data['dato'] = $this->Materia->traerMateria($id);
-			$this->form_validation->set_rules("dato_dato1","dato_dato1","required");
-			$this->form_validation->set_rules("dato_dato2","dato_dato2","required");
-			$this->form_validation->set_rules("dato_dato3","dato_dato3","required");
+			$this->form_validation->set_rules("nombre","nombre","required");
+			$this->form_validation->set_rules("creditos","creditos","required");
+			$this->form_validation->set_rules("semestre","semestre","required");
+			$this->form_validation->set_rules("folio","folio","required");
 			if($this->form_validation->run() == FALSE){
 			$this->load->view("Dato/update",$data);
 			}else{
