@@ -260,16 +260,20 @@
 				<input style="display: none;" name="id_dato" value="<?= $dato->id_dato;?>" type="text" class="form-control">
 
 	            <div class="form-group">
-					<label>Dato 1</label>
-					<input name="dato_dato1" value="<?= $dato->dato_dato1;?>" type="text" class="form-control">
+					<label>Nombre</label>
+					<input name="nombre" value="<?= $dato->dato_dato1;?>" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>Dato 2</label>
-					<input name="dato_dato2" value="<?= $dato->dato_dato2;?>" type="text" class="form-control">
+					<label>Créditos</label>
+					<input name="creditos" value="<?= $dato->dato_dato2;?>" type="number" class="form-control">
 				</div>
 				<div class="form-group">
-					<label>Dato 3</label>
-					<input name="dato_dato3" value="<?= $dato->dato_dato3;?>" type="text" class="form-control">
+					<label>Semestre</label>
+					<input name="semestre" value="<?= $dato->dato_dato3;?>" type="number" class="form-control">
+				</div>
+        <div class="form-group">
+					<label>Folio</label>
+					<input name="folio" value="<?= $dato->dato_dato3;?>" type="number" step="0.01" class="form-control">
 				</div>
 				<input type="submit" class="btn btn-success" value="Guardar">
 			</form>
