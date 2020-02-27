@@ -72,6 +72,18 @@ class Materias extends CI_Controller{
 			redirect("Materias");
 		}
 	}
+
+	public function verMateria($id = null){
+		# code...
+		if($id != null){
+
+			$data['alumno_a_ver'] = $this->Materia->traerMateria($id);
+			$this->load->view('Dato/view',$data);
+
+		}else{
+			redirect("Materias");
+		}
+	}
 }
 
 ?>

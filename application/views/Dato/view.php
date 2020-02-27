@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CRUD Datos</title>
+<title>CRUD Materia</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +25,7 @@
 		border-radius: 3px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
-	.table-title {
+	.table-title {        
 		padding-bottom: 15px;
 		background: #435d7d;
 		color: #fff;
@@ -81,7 +81,7 @@
         font-size: 13px;
         margin: 0 5px;
         cursor: pointer;
-    }
+    }	
     table.table td:last-child i {
 		opacity: 0.9;
 		font-size: 21px;
@@ -129,11 +129,11 @@
     }
     .pagination li a:hover {
         color: #666;
-    }
+    }	
     .pagination li.active a, .pagination li.active a.page-link {
         background: #03A9F4;
     }
-    .pagination li.active a:hover {
+    .pagination li.active a:hover {        
         background: #0397d6;
     }
 	.pagination li.disabled i {
@@ -147,12 +147,12 @@
         float: left;
         margin-top: 10px;
         font-size: 13px;
-    }
+    }    
 	/* Custom checkbox */
 	.custom-checkbox {
 		position: relative;
 	}
-	.custom-checkbox input[type="checkbox"] {
+	.custom-checkbox input[type="checkbox"] {    
 		opacity: 0;
 		position: absolute;
 		margin: 5px 0 0 3px;
@@ -227,86 +227,38 @@
 	.modal .btn {
 		border-radius: 2px;
 		min-width: 100px;
-	}
+	}	
 	.modal form label {
 		font-weight: normal;
-	}
+	}	
 </style>
 </head>
 <body>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
+            
+            	
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>CRUD <b>Datos</b></h2>
+						<h2>Materia <b><?= $alumno_a_ver->id;?></b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Materias/agregarMateria" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Materia</span></a>
-
+						<a href="<?php echo base_url(); ?>index.php/Materias" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
+											
 					</div>
                 </div>
+               
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-						<th>Creditos</th>
-                        <th>Semestre</th>
-                        <th>Folio</th>
-                        <th>Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                	 <?php
 
-	  if(isset($datos)){
-	   foreach ($datos as $fila) {
-
-
-	   	?>
-                    <tr>
-                        <td><?= $fila->id;?></td>
-                        <td><?= $fila->nombre;?></td>
-						<td><?= $fila->creditos;?></td>
-                        <td><?= $fila->semestre;?></td>
-                        <td><?= $fila->folio;?></td>
-                        <td>
-
-                        	<a href="<?php echo base_url(); ?>index.php/Materias/verMateria/<?php echo $fila->id; ?> " 
-                        	class="view" >
-                        	<i class="material-icons" 
-                        		data-toggle="tooltip" 
-                        		title="Ver">&#xe417;
-                        	</i>
-                        </a>
-
-                         <a href="<?php echo base_url(); ?>index.php/Materias/actualizarMateria/<?php echo $fila->id; ?> "
-                         	class="edit">
-                         	<i class="material-icons"
-                         		data-toggle="tooltip"
-                         		title="Editar">&#xE254;
-                         	</i>
-                         </a>
-
-                     	<a href="<?php echo base_url(); ?>index.php/Materias/eliminarMateria/<?php echo $fila->id; ?>" class="delete" >
-                     		<i class="material-icons"
-                     			data-toggle="tooltip"
-                     			title="Eliminar">&#xE872;
-                     		</i>
-                     	</a>
-                        </td>
-                    </tr>
-                     <?php }
-                 }else{ ?>
-
-
-	  <?php } ?>
-                </tbody>
-            </table>
-
+            <h2>Nombre: <?= $alumno_a_ver->nombre;?></h2>
+            <br>
+            <h2>Creditos: <?= $alumno_a_ver->creditos;?></h2>
+            <br>
+            <h2>Semestre: <?= $alumno_a_ver->semestre;?></h2>
+            <br>
+            <h2>Folio: <?= $alumno_a_ver->folio;?></h2>
         </div>
     </div>
 </body>
-</html>
+</html>                                		                            
