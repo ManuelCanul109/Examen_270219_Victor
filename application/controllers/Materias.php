@@ -21,17 +21,18 @@ class Materias extends CI_Controller{
 		# code...
 		$this->load->library("form_validation");
 		$this->load->helper("form");
-		$data["titulo"] = "Agregar Alumno";
+		$data["titulo"] = "Agregar Materia";
 
-		$this->form_validation->set_rules("dato_dato1","dato_dato1","required");
-		$this->form_validation->set_rules("dato_dato2","dato_dato2","required");
-		$this->form_validation->set_rules("dato_dato3","dato_dato3","required");
+		$this->form_validation->set_rules("nombre","nombre","required");
+		$this->form_validation->set_rules("creditos","creditos","required");
+		$this->form_validation->set_rules("semestre","semestre","required");
+		$this->form_validation->set_rules("folio","folio","required");
 
 		if($this->form_validation->run() == FALSE){
 			$this->load->view("Dato/add",$data);
 		}else{
-			$this->Materia->insertarDato();
-			redirect('Datos');
+			$this->Materia->agregarMateria();
+			redirect('Materias');
 		}
 	}
 
@@ -50,11 +51,11 @@ class Materias extends CI_Controller{
 			}else{
 				
 				$this->Materia->actualizarDat($id);
-				redirect('Datos');
+				redirect('Materias');
 			}
 		}else{
 			$this->Materia->actualizarDat($id);
-			redirect("Datos");
+			redirect("Materias");
 		}
 
 	}
@@ -63,11 +64,11 @@ class Materias extends CI_Controller{
 		
 		if($id != null){
 			if($this->Materia->eliminarDato($id)){
-				redirect('Datos');
+				redirect('Materias');
 			}
 		}else{
 			//$this->Dato->actualizarDat($id);
-			redirect("Datos");
+			redirect("Materias");
 		}
 	}
 }

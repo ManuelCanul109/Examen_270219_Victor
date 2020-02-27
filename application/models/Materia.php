@@ -31,13 +31,14 @@ class Materia extends CI_model{
 	public function agregarMateria(){
 		
 
-		$alumno = array(
-			'nombre_alumno' => $this->input->post('nombre'),
-			'apellidos_alumno' => $this->input->post('apellido'),
-			'matricula_alumno' => $this->input->post('matricula')
+		$materia = array(
+			'nombre' => $this->input->post('nombre'),
+			'creditos' => $this->input->post('creditos'),
+			'semestre' => $this->input->post('semestre'),
+			'folio' => $this->input->post('folio')
 		);
 
-		return $this->db->insert("materias",$alumno);
+		return $this->db->insert("materias",$materia);
 	}
 
 	public function actualizarMateria($id = null){

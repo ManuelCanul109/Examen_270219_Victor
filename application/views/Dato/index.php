@@ -242,7 +242,7 @@
 						<h2>CRUD <b>Datos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Materias/agregarMateria" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Dato</span></a>
+						<a href="<?php echo base_url(); ?>index.php/Materias/agregarMateria" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Materia</span></a>
 
 					</div>
                 </div>
@@ -251,9 +251,10 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Dato Dato1</th>
-						<th>Dato Dato2</th>
-                        <th>Dato Dato3</th>
+                        <th>Nombre</th>
+						<th>Creditos</th>
+                        <th>Semestre</th>
+                        <th>Folio</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
@@ -266,13 +267,14 @@
 
 	   	?>
                     <tr>
-                        <td><?= $fila->id_dato;?></td>
-                        <td><?= $fila->dato_dato1;?></td>
-						<td><?= $fila->dato_dato2;?></td>
-                        <td><?= $fila->dato_dato3;?></td>
+                        <td><?= $fila->id;?></td>
+                        <td><?= $fila->nombre;?></td>
+						<td><?= $fila->creditos;?></td>
+                        <td><?= $fila->semestre;?></td>
+                        <td><?= $fila->folio;?></td>
                         <td>
 
-                         <a href="<?php echo base_url(); ?>index.php/Materias/actualizarMateria/<?php echo $fila->id_dato; ?> "
+                         <a href="<?php echo base_url(); ?>index.php/Materias/actualizarMateria/<?php echo $fila->id; ?> "
                          	class="edit">
                          	<i class="material-icons"
                          		data-toggle="tooltip"
@@ -280,7 +282,7 @@
                          	</i>
                          </a>
 
-                     	<a href="<?php echo base_url(); ?>index.php/Materias/eliminarMateria/<?php echo $fila->id_dato; ?>" class="delete" >
+                     	<a href="<?php echo base_url(); ?>index.php/Materias/eliminarMateria/<?php echo $fila->id; ?>" class="delete" >
                      		<i class="material-icons"
                      			data-toggle="tooltip"
                      			title="Eliminar">&#xE872;

@@ -255,19 +255,19 @@
 
 	            <div class="form-group">
 					<label>Nombre</label>
-					<input name="dato_dato1" type="text" class="form-control">
+					<input name="nombre" type="text" class="form-control">
 				</div>
 				<div class="form-group">
 					<label>Créditos</label>
-					<input name="dato_dato2" type="text" class="form-control">
+					<input name="creditos" type="number" class="form-control">
 				</div>
 				<div class="form-group">
 					<label>Semestre</label>
-					<input name="dato_dato3" type="text" class="form-control">
+					<input name="semestre" type="number" class="form-control">
 				</div>
         <div class="form-group">
 					<label>Folio</label>
-					<input name="dato_dato4" type="text" class="form-control">
+					<input name="folio" type="number" step="0.01" class="form-control">
 				</div>
 				<?php echo validation_errors(); ?>
 				<input type="submit" class="btn btn-success" value="Guardar">
