@@ -241,7 +241,7 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Agregando <b>Alumno</b></h2>
+						<h2>Agregar <b>Materia</b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="<?php echo base_url(); ?>index.php/Materias" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
