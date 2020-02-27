@@ -244,14 +244,14 @@
 						<h2>Agregando <b>Alumno</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Datos" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
+						<a href="<?php echo base_url(); ?>index.php/Materias" class="btn btn-info"><i class="material-icons">&#xe5c4;</i> <span>Regresar</span></a>
 
 					</div>
                 </div>
 
             </div>
 
-<?php echo form_open('Datos/agregarDato'); ?>
+<?php echo form_open('Materias/agregarMateria'); ?>
 
 	            <div class="form-group">
 					<label>Dato 1</label>

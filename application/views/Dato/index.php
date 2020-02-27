@@ -242,7 +242,7 @@
 						<h2>CRUD <b>Datos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="<?php echo base_url(); ?>index.php/Materias/agregarDato" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Dato</span></a>
+						<a href="<?php echo base_url(); ?>index.php/Materias/agregarMateria" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar Dato</span></a>
 
 					</div>
                 </div>
@@ -272,7 +272,7 @@
                         <td><?= $fila->dato_dato3;?></td>
                         <td>
 
-                         <a href="<?php echo base_url(); ?>index.php/Datos/actualizarDato/<?php echo $fila->id_dato; ?> "
+                         <a href="<?php echo base_url(); ?>index.php/Materias/actualizarMateria/<?php echo $fila->id_dato; ?> "
                          	class="edit">
                          	<i class="material-icons"
                          		data-toggle="tooltip"
@@ -280,7 +280,7 @@
                          	</i>
                          </a>
 
-                     	<a href="<?php echo base_url(); ?>index.php/Datos/eliminarDato/<?php echo $fila->id_dato; ?>" class="delete" >
+                     	<a href="<?php echo base_url(); ?>index.php/Materias/eliminarMateria/<?php echo $fila->id_dato; ?>" class="delete" >
                      		<i class="material-icons"
                      			data-toggle="tooltip"
                      			title="Eliminar">&#xE872;

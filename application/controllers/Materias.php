@@ -17,7 +17,7 @@ class Materias extends CI_Controller{
 		$this->load->view('Dato/index',$data);
 	}
 
-	public function agregarDato(){
+	public function agregarMateria(){
 		# code...
 		$this->load->library("form_validation");
 		$this->load->helper("form");
@@ -35,7 +35,7 @@ class Materias extends CI_Controller{
 		}
 	}
 
-	public function actualizarDato($id = null){
+	public function actualizarMateria($id = null){
 		# code...
 		$this->load->library("form_validation");
 		$this->load->helper("form");
@@ -59,7 +59,7 @@ class Materias extends CI_Controller{
 
 	}
 
-	public function eliminarDato($id = null){
+	public function eliminarMateria($id = null){
 		
 		if($id != null){
 			if($this->Materia->eliminarDato($id)){
