@@ -19,7 +19,7 @@ class Materia extends CI_model{
 	}
 
 	//FUNCION QUE ELIMINA UN ALUMNO USANDO EL ID
-	public function eliminarMateria($id){
+	public function eliminarMateri($id){
 		$this->db->where('id',$id);
 		if($this->db->delete('materias')){
 			return true;
@@ -41,7 +41,7 @@ class Materia extends CI_model{
 		return $this->db->insert("materias",$materia);
 	}
 
-	public function actualizarMateria($id = null){
+	public function actualizarMateri($id = null){
 		# code...
 		$alumno = array(
 			'nombre_alumno' => $this->input->post('nombre_alumno'),

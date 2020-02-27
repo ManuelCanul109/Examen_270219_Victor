@@ -42,7 +42,7 @@ class Materias extends CI_Controller{
 		$this->load->helper("form");
 
 		if($id != null){
-			$data['dato'] = $this->Materia->traerDato($id);
+			$data['dato'] = $this->Materia->traerMateria($id);
 			$this->form_validation->set_rules("dato_dato1","dato_dato1","required");
 			$this->form_validation->set_rules("dato_dato2","dato_dato2","required");
 			$this->form_validation->set_rules("dato_dato3","dato_dato3","required");
@@ -50,11 +50,11 @@ class Materias extends CI_Controller{
 			$this->load->view("Dato/update",$data);
 			}else{
 				
-				$this->Materia->actualizarDat($id);
+				$this->Materia->actualizarMateri($id);
 				redirect('Materias');
 			}
 		}else{
-			$this->Materia->actualizarDat($id);
+			$this->Materia->actualizarMateri($id);
 			redirect("Materias");
 		}
 
@@ -63,7 +63,7 @@ class Materias extends CI_Controller{
 	public function eliminarMateria($id = null){
 		
 		if($id != null){
-			if($this->Materia->eliminarDato($id)){
+			if($this->Materia->eliminarMateri($id)){
 				redirect('Materias');
 			}
 		}else{
